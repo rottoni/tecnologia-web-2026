@@ -1,124 +1,135 @@
-/* Reset Básico*/
+/* Reset Básico */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-/*Variáveis*/
-:root{
+/* Variáveis */
+:root {
     --cor-fundo: #e9e9e9;
     --cor-texto: #303030;
     --cor-auxiliar: #bdbdbd;
 }
 
-/*Tipografia padrão e outras coisas*/
-body{
+/* Tipografia padrão e outras coisas */
+body {
     background-color: var(--cor-fundo);
     color: var(--cor-texto);
     font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
     font-weight: 400;
     line-height: 1.6;
 }
-.mainContainer{
+
+.main-container {
     display: flex;
     min-height: 100vh;
     justify-content: space-between;
 }
 
-/*Propriedades do SideBar*/
-.sideBar{
+/* Propriedades do SideBar */
+.sidebar {
     width: 250px;
     flex-shrink: 0;
-    background-color:var(--cor-auxiliar);
+    background-color: var(--cor-auxiliar);
     display: flex;
     flex-direction: column;
 }
-.logo{
+
+.logo {
     display: flex;
     align-items: center;
     justify-content: left;
     padding: 20px 5px;
     gap: 5px;
+    margin-bottom: 40px;
 }
-.logo-img{
+
+.logo-img {
     height: 60px;
     width: auto;
 }
-.logo-txt{
+
+.logo-txt {
     margin: 0;
     white-space: nowrap;
 }
-.lista-links{
+
+.lista-links {
     display: flex;
     flex-direction: column;
-    padding: 30px 30px;
+    padding: "30px";
     gap: 20px;
 }
 
 .lista-links a {
     color: #303030;
+    margin-left: 20px;
 }
 
-/*Propriedades do conteudo principal*/
-.contentSection{
+/* Propriedades do conteudo principal */
+.content-section {
     flex-grow: 1;
     padding: 30px;
 }
-.topbar{
+
+.topbar {
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
-.topbar-img{
+
+.topbar-img {
     height: 100px;
     width: auto;
 }
+
 .subtitle {
     margin-bottom: 40px;
 }
+
 .card {
     border: 2px solid var(--cor-auxiliar);
     border-radius: 8px;
     overflow: hidden;
     margin-bottom: 30px;
-    
+
 }
+
 .card h3 {
     background-color: var(--cor-auxiliar);
     padding: 10px 20px;
     margin: 0;
     border-bottom: 1px solid var(--cor-auxiliar);
 }
+
 .card ul {
     list-style: none;
     padding: 15px;
 }
+
 .card li {
     padding: 5px 0;
 }
 
-/* Media Query*/
-
-/* Estilo para Telas Menores (Mobile/Tablet) */
-@media (max-width: 768px) {
-    
-    .mainContainer {
-        flex-direction: column; /* A Sidebar vai para o topo e o Conteúdo para baixo */
+/* Media Query para telas menores de 768px */
+@media (width <=768px) {
+    .main-container {
+        flex-direction: column;
     }
 
-    .sideBar {
-        width: 100%;       /* A sidebar ocupa a largura toda da tela */
-        min-height: auto;  /* Ela não precisa mais ter 100vh de altura */
+    .sidebar {
+        width: 100%;
+        min-height: auto;
     }
 
-    .lista-links { 
+    .lista-links {
         text-align: center;
         list-style: none;
+        margin-bottom: 40px;
     }
 
-    .lista-links li h3{
-        
+    .lista-links li h3 {
         margin: 0;
         text-align: center;
     }
@@ -127,11 +138,13 @@ body{
         justify-content: center;
     }
 
-    .contentSection {
-        padding: 30px;     /* Reduzimos o respiro lateral para sobrar espaço no celular */
+    .content-section {
+        padding: 30px;
     }
 
     .card {
-        max-width: 100%;   /* Os cards ocupam toda a largura disponível */
+        max-width: 100%;
     }
 }
+
+/* Esse lint é muito fresco em questão de nomenclatura, espaçamento e comentarios, não tenho nenhuma libertade */
