@@ -1,64 +1,85 @@
 <!doctype html>
 <html lang="pt-BR">
-  <head>
-    <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/javascript.svg" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Aluno Online</title>
-    <style>
-      body { font-family: Arial, Helvetica, sans-serif; }
-    </style>
-  </head>
-  <body>
-    <script type="module" src="/src/main.js"></script>
-      
-    <aside>
-        <header>
-          <h3> Aluno Online</h3>
-        </header>
-        <nav>
-          <ul>
-            <li> <a href = "">Dashboard</a> </li>
-            <li> <a href = "">Notas</a> </li>
-            <li> <a href = "">Faltas</a> </li>
-            <li> <a href = "">Boletos</a> </li>
-            <li> <a href = "">Requerimentos</a> </li>
-            <li> <a href = "">Sair</a> </li>
-          </ul>
-        </nav>
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="icon" type="image/svg+xml" href="/javascript.svg" />
+  <link rel="stylesheet" href="src/style.css" />
+  <title>Aluno Online</title>
+</head>
+
+<body>
+  <script type="module" src="/src/main.js"></script>
+
+  <main class="main-container">
+
+    <aside class="sidebar">
+      <section class="logo">
+        <img src="images/cap.png" alt="IESB" class="logo-img">
+        <h2 class="logo-txt">Aluno Online</h2>
+      </section>
+
+      <ul class="lista-links">
+        <li>
+          <h3> <a href="">Dashboard</a> </h3>
+        </li>
+        <li>
+          <h3> <a href="">Notas</a> </h3>
+        </li>
+        <li>
+          <h3> <a href="">Faltas</a> </h3>
+        </li>
+        <li>
+          <h3> <a href="">Boletos</a> </h3>
+        </li>
+        <li>
+          <h3> <a href="">Requerimentos</a> </h3>
+        </li>
+        <li>
+          <h3> <a href="">Sair</a> </h3>
+        </li>
+      </ul>
     </aside>
-  
-    <main>
-      <header>
+
+    <section class="content-section">
+
+      <header class="topbar">
         <h1> Olá, Aluno!</h1>
+        <img src="images/avatar.png" alt="Acessar Conta" class="topbar-img">
       </header>
 
-      <section>
-        <header>
-          <h3> Bem-vindo ao portal do aluno</h3>
-        </header>
-          
-        <p> <strong> Mural de avisos</strong></p>
+      <h2 class="subtitle"> Bem-vindo ao portal do aluno</h2>
+
+      <section class="card">
+        <h3> <strong> Mural de Avisos</strong></h3>
         <ul>
           <li>Inscrição para o projeto de extensão</li>
           <li>Eleição para o representante de turma</li>
         </ul>
+      </section>
 
-        <p> <strong> Calendário Acadêmico</strong></p>
+      <section class="card">
+        <h3> <strong> Calendário Acadêmico</strong></h3>
         <ul>
           <li>23/02 - Início do período letivo 2026-1</li>
           <li>25/04 - Prazo final para aplicação da P1</li>
           <li>23/06 - Prazo final para aplicação da P2</li>
           <li>04/07 - Fim do período letivo 2026-1</li>
         </ul>
+      </section>
 
-        <p> <strong> Minhas Disciplinas</strong></p>
+      <section class="card">
+        <h3> <strong> Minhas Disciplinas</strong></h3>
         <ul>
           <li>Bancos de Dados I (HMDC253)</li>
           <li>Estrutura de Dados (MDC127)</li>
           <li>Tecnologias Web (HMDC251)</li>
         </ul>
       </section>
-    </main>
-  </body>
+    </section>
+
+  </main>
+</body>
+
 </html>
