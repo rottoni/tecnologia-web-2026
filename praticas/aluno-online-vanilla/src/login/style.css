@@ -1,0 +1,118 @@
+/*
+Centralize o formulário na página utilizando Flexbox;
+Defina largura máxima para o container do formulário;
+Estilize campos, botão e mensagens de erro;
+Utilize as variáveis CSS já definidas anteriormente (--cor-fundo, --cor-texto)
+*/
+
+/* Reset Básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Variáveis */
+:root {
+    --cor-fundo: #e9e9e9;
+    --cor-texto: #303030;
+    --cor-auxiliar: #bdbdbd;
+    --cor-destaque:  #4797ec;
+    --cor-erro: #e75752;
+}
+
+/* Tipografia padrão e outras coisas */
+body {
+    background-color: var(--cor-fundo);
+    color: var(--cor-texto);
+    font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
+    font-weight: 400;
+    line-height: 1.6;
+}
+
+.main-container {
+    display: flex;
+    min-height: 100vh;
+    justify-content: center;
+}
+
+
+/* Formulário */
+form {
+    max-width: 400px;
+    margin: 20px auto;
+    padding: 20px;
+    border: 1px solid var(--cor-auxiliar);
+    border-radius: 8px;
+}
+
+/* Espaçamento entre os grupos de campos */
+.form-group {
+    margin-bottom: 15px;
+}
+
+/* Estilo dos Rótulos (Labels) */
+label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 5px;
+    color: var(--cor-fundo);
+}
+
+/* Estilo dos Campos de Entrada (Inputs) */
+input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid var(--cor-auxiliar);
+    border-radius: 4px;
+    box-sizing: border-box;
+    font-size: 16px;
+}
+
+/* Destaque ao clicar no campo */
+input:focus {
+    outline: none;
+    border-color: var(--cor-destaque);
+}
+
+/* Estilo do Botão de Enviar */
+button {
+    width: 100%;
+    padding: 12px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+
+/* Mensagens de Erro */
+.error-message {
+    color: var (--cor-erro);
+    font-size: 0.85rem;
+    margin-top: 5px;
+    min-height: 1.2em;
+}
+
+/* Estilo para o Rodapé */
+footer {
+    text-align: center;
+    margin-top: 30px;
+    color: var (--cor-texto);
+    font-size: 0.9rem;
+}
+
+/* Media Query para telas menores de 768px */
+@media (width <=768px) {
+    .main-container {
+        flex-direction: column;
+    }
+
+    .content-section {
+        padding: 30px;
+    }
+}
